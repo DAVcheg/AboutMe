@@ -13,7 +13,12 @@ class AboutMeViewController: UIViewController {
     
     // MARK: - IB Outlets
     
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var labelLB: UILabel!
+    
     // MARK: - Public Properties
+    
+    var Label = ""
     
     // MARK: - Private Properties
     
@@ -23,6 +28,7 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelLB.text = "I'm glad to see you, \(Label)!"
     }
     
     // MARK: - Navigation

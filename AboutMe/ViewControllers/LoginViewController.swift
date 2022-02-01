@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IB Outlets
     
@@ -17,40 +17,44 @@ class LoginViewController: UIViewController {
     // MARK: - Public Properties
     
     // MARK: - Private Properties
-    
-    private var userNameSession = ""
-    private let namePasswordArray = ["User" : "1234"]
+
+    private let user = UserBase.getСredentials()
     
     // MARK: - Override Methods
     
     // MARK: - Navigation
     
-    func unwind(for unwindSegue: UIStoryboardSegue) {
-        guard unwindSegue.source is WelcomeViewController else { return }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as! UITabBarController
+        let WelcomeViewController = tabBarController.viewControllers?[0] as! WelcomeViewController
+        WelcomeViewController.userName = user.login
+    }
+    
+    
+    // MARK: - IB Actions
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameSession
-    }
-    
-    // MARK: - IB Actions
     
     @IBAction func logInButton() {
         userNameTF.text!.isEmpty ? showAlert(with: "Attention", and: "Enter your name" )
         : print("Name enter")
         passwordTF.text!.isEmpty ? showAlert(with: "Attention", and: "Enter your password" )
         : print("Password enter")
-        for (userName, password) in namePasswordArray {
-            userNameSession = userName
-            if userNameTF.text != userName || passwordTF.text != password {
-                showAlert(with: "Attention", and: "Your name or password is wrong")
-            }
+        if userNameTF.text != user.login || passwordTF.text != user.password {
+            showAlert(with: "Attention", and: "Your name or password is wrong")
+            passwordTF.text = ""
+        } else {
             performSegue(withIdentifier: "showWelcome", sender: nil)
-            break
+        }
     }
+    
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(with: "Oops!", and: "Your name is \(user.login)")
+        : showAlert(with: "Oops!", and: "Your password is \(user.password)")
     }
     
     
@@ -67,22 +71,19 @@ class LoginViewController: UIViewController {
     
     // MARK: - Extension
     
-//extension LoginViewController {
-        
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            super.touchesBegan(touches, with: event)
-            view.endEditing(true)
-        }
-        
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            if textField == userNameTF {
-                passwordTF.becomeFirstResponder()
-            } else {
-                logInButton()
-                performSegue(withIdentifier: "showWelcome", sender: nil)
-                return true;
-            }
-            return false
-        }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            logInButton()
+            performSegue(withIdentifier: "showWelcome", sender: nil)
+        }
+        return true
+    }
+}
 
