@@ -31,15 +31,26 @@ struct UserBase {
         let city: String
         let university: String
         let education: String
-        let photo: UIImage
+        let placeOfWork: String
+        let position: String
+        let experience: Int
+        let photo: [String]
+        
        
         var description: String {
-            """
-\(name) \(surname), was born in \(yearOfBirth) year in city \(city).
-            Got educated in \(university) by specialty \(education)
+"""
+\(name) \(surname) was born in \(yearOfBirth) year in city \(city).
+Got educated in \(university) by specialty \(education).
 """
         }
         
+        var aboutWork: String {
+"""
+\(name) \(surname) works in \(placeOfWork) and since \(experience) have been holding
+the position \(position)
+"""
+        }
+    
         static func getInfoAboutUser() -> Person {
             Person(
                 name: "Aleksey",
@@ -48,7 +59,10 @@ struct UserBase {
                 city: "Khabarovsk",
                 university: "Pacific National University",
                 education: "Information systems and technologies",
-                photo: UIImage(named: "MyPhoto")!
+                placeOfWork: "Federal Agency for Railway Transport (Roszheldor)",
+                position: "Head of transport security department",
+                experience: 2018,
+                photo: ["MyPhoto", "MyPhotoWork"]
                 )
         }
     }

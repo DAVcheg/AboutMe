@@ -18,25 +18,15 @@ class AboutMeViewController: UIViewController {
     
     // MARK: - Public Properties
     
-    var Label = ""
+    let info = UserBase.Person.getInfoAboutUser()
     
-    // MARK: - Private Properties
-    
-    // MARK: - Initializers
     
     // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelLB.text = "I'm glad to see you, \(Label)!"
+        image.image = UIImage(named: info.photo[0])
+        labelLB.text = info.description
     }
-    
-    // MARK: - Navigation
-    
-    // MARK: - IB Actions
-    
-    // MARK: - Public Methods
-    
-    // MARK: - Private Methods
     
 }

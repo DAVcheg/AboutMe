@@ -15,15 +15,17 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Public Properties
     
-    var userName = ""
+    let userName = UserBase.Person.getInfoAboutUser()
     
     // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "I'm glad to see you, \(userName)!"
+        userNameLabel.text = """
+"I'm glad to see you, \(userName.name) \(userName.surname)!
+"""
     }
-        
+    
 }
 
 

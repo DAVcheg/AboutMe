@@ -25,9 +25,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
-        let WelcomeViewController = tabBarController.viewControllers?[0] as! WelcomeViewController
-        WelcomeViewController.userName = user.login
+//        let tabBarController = segue.destination as! UITabBarController
+//        let WelcomeViewController = tabBarController.viewControllers?[0] as! WelcomeViewController
     }
     
     
