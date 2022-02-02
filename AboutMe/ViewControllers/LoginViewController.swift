@@ -14,13 +14,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    // MARK: - Public Properties
-    
     // MARK: - Private Properties
 
     private let user = UserBase.getСredentials()
-    
-    // MARK: - Override Methods
     
     // MARK: - Navigation
     
@@ -38,9 +34,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func logInButton() {
-        userNameTF.text!.isEmpty ? showAlert(with: "Attention", and: "Enter your name" )
+        userNameTF.text!.isEmpty ? showAlert(
+            with: "Attention",
+            and: "Enter your name"
+        )
         : print("Name enter")
-        passwordTF.text!.isEmpty ? showAlert(with: "Attention", and: "Enter your password" )
+        passwordTF.text!.isEmpty ? showAlert(
+            with: "Attention",
+            and: "Enter your password"
+        )
         : print("Password enter")
         if userNameTF.text != user.login || passwordTF.text != user.password {
             showAlert(with: "Attention", and: "Your name or password is wrong")
@@ -57,12 +59,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    // MARK: - Public Methods
-    
     // MARK: - Private Methods
     
     private func showAlert(with title: String, and message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)

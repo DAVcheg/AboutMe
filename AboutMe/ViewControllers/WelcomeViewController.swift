@@ -8,14 +8,14 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
     // MARK: - IB Outlets
     
     @IBOutlet var userNameLabel: UILabel!
     
     // MARK: - Public Properties
     
-    let userName = UserBase.Person.getInfoAboutUser()
+    private let userName = UserBase.Person.getInfoAboutUser()
     
     // MARK: - Override Methods
     

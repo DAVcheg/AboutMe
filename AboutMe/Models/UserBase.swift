@@ -36,10 +36,10 @@ struct UserBase {
         let experience: Int
         let photo: [String]
         
-       
+        
         var description: String {
 """
-\(name) \(surname) was born in \(yearOfBirth) year in city \(city).
+\(name) \(surname) was born in \(yearOfBirth) year in \(city) city.
 Got educated in \(university) by specialty \(education).
 """
         }
@@ -47,10 +47,10 @@ Got educated in \(university) by specialty \(education).
         var aboutWork: String {
 """
 \(name) \(surname) works in \(placeOfWork) and since \(experience) have been holding
-the position \(position)
+the position \(position).
 """
         }
-    
+        
         static func getInfoAboutUser() -> Person {
             Person(
                 name: "Aleksey",
@@ -63,7 +63,7 @@ the position \(position)
                 position: "Head of transport security department",
                 experience: 2018,
                 photo: ["MyPhoto", "MyPhotoWork"]
-                )
+            )
         }
     }
 }
