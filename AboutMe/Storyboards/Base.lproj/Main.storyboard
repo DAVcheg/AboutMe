@@ -169,7 +169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX1-6v-fKr">
-                                <rect key="frame" x="130" y="488" width="60" height="31"/>
+                                <rect key="frame" x="215" y="488" width="89" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="More"/>
                                 <connections>
@@ -181,10 +181,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8fw-8a-fkK" firstAttribute="top" secondItem="glt-gC-AYV" secondAttribute="top" constant="20" id="7G1-U6-NKq"/>
-                            <constraint firstItem="oX1-6v-fKr" firstAttribute="leading" secondItem="glt-gC-AYV" secondAttribute="leading" constant="130" id="9ir-M7-Do9"/>
+                            <constraint firstItem="oX1-6v-fKr" firstAttribute="leading" secondItem="glt-gC-AYV" secondAttribute="leading" constant="215" id="9ir-M7-Do9"/>
                             <constraint firstItem="8fw-8a-fkK" firstAttribute="trailing" secondItem="glt-gC-AYV" secondAttribute="trailing" id="Jpx-ZV-NaS"/>
                             <constraint firstItem="YGs-l8-hpX" firstAttribute="leading" secondItem="glt-gC-AYV" secondAttribute="leading" constant="20" id="JwG-3T-7JJ"/>
-                            <constraint firstItem="glt-gC-AYV" firstAttribute="trailing" secondItem="oX1-6v-fKr" secondAttribute="trailing" constant="130" id="K1Q-XY-6d7"/>
+                            <constraint firstItem="glt-gC-AYV" firstAttribute="trailing" secondItem="oX1-6v-fKr" secondAttribute="trailing" constant="16" id="K1Q-XY-6d7"/>
                             <constraint firstItem="8fw-8a-fkK" firstAttribute="leading" secondItem="glt-gC-AYV" secondAttribute="leading" id="LqC-Zk-rkY"/>
                             <constraint firstItem="oX1-6v-fKr" firstAttribute="bottom" secondItem="glt-gC-AYV" secondAttribute="bottom" id="Pk0-nh-GPu"/>
                             <constraint firstItem="glt-gC-AYV" firstAttribute="trailing" secondItem="YGs-l8-hpX" secondAttribute="trailing" constant="20" id="SQ0-kc-dGc"/>
@@ -199,12 +199,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPM-kO-8Y3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2168" y="71"/>
+            <point key="canvasLocation" x="2167.5" y="70.774647887323951"/>
         </scene>
         <!--Work View Controller-->
         <scene sceneID="1QO-ze-PbY">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="7pv-em-Qw9" userLabel="Work View Controller" customClass="WorkViewController" customModule="AboutMe" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="7pv-em-Qw9" userLabel="Work View Controller" customClass="WorkViewController" customModule="AboutMe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehB-21-dPk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,7 +222,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnr-U6-eXu">
-                                <rect key="frame" x="130" y="489" width="60" height="31"/>
+                                <rect key="frame" x="216" y="489" width="88" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                 <connections>
@@ -235,9 +235,9 @@
                         <constraints>
                             <constraint firstItem="Vu5-N9-yhZ" firstAttribute="top" secondItem="zST-3L-FVR" secondAttribute="bottom" constant="8" symbolic="YES" id="2Yl-ze-Lhk"/>
                             <constraint firstItem="9rC-2A-hbM" firstAttribute="trailing" secondItem="Vu5-N9-yhZ" secondAttribute="trailing" constant="20" id="4gu-qc-6qf"/>
-                            <constraint firstItem="9rC-2A-hbM" firstAttribute="trailing" secondItem="Qnr-U6-eXu" secondAttribute="trailing" constant="130" id="4i1-PH-IVG"/>
+                            <constraint firstItem="9rC-2A-hbM" firstAttribute="trailing" secondItem="Qnr-U6-eXu" secondAttribute="trailing" constant="16" id="4i1-PH-IVG"/>
                             <constraint firstItem="zST-3L-FVR" firstAttribute="top" secondItem="9rC-2A-hbM" secondAttribute="top" constant="20" id="II7-CV-0tU"/>
-                            <constraint firstItem="Qnr-U6-eXu" firstAttribute="leading" secondItem="9rC-2A-hbM" secondAttribute="leading" constant="130" id="dDy-wV-VJ9"/>
+                            <constraint firstItem="Qnr-U6-eXu" firstAttribute="leading" secondItem="9rC-2A-hbM" secondAttribute="leading" constant="216" id="dDy-wV-VJ9"/>
                             <constraint firstItem="9rC-2A-hbM" firstAttribute="bottom" secondItem="Qnr-U6-eXu" secondAttribute="bottom" constant="48" id="nRj-Mo-ogw"/>
                             <constraint firstItem="Vu5-N9-yhZ" firstAttribute="leading" secondItem="9rC-2A-hbM" secondAttribute="leading" constant="20" id="qdx-Fn-qgs"/>
                             <constraint firstItem="zST-3L-FVR" firstAttribute="leading" secondItem="9rC-2A-hbM" secondAttribute="leading" id="rTt-hy-YhH"/>
@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7J-nX-P5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2882" y="71"/>
+            <point key="canvasLocation" x="2881.875" y="70.774647887323951"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="W0t-L0-Gfm">
