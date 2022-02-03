@@ -5,10 +5,6 @@
 //  Created by Aleksey Dergunov on 01.02.2022.
 //
 
-import UIKit
-
-
-
 struct UserBase {
     
     let login: String
